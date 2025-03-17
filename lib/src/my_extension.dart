@@ -6,6 +6,7 @@ extension Navigation on BuildContext {
   Future<dynamic> pushNamed(String routeName, {Object? arguments}) {
     return Navigator.of(this).pushNamed(routeName, arguments: arguments);
   }
+  
 
   Future<dynamic> pushReplacementNamed(String routeName, {Object? arguments}) {
     return Navigator.of(this)
@@ -81,6 +82,10 @@ extension KeyBord on BuildContext {
   double get keyboardHeight => MediaQuery.of(this).viewInsets.bottom;
   double get keyboardHeightWithoutBottom =>
       MediaQuery.of(this).viewInsets.bottom;
+}
+extension Translate on BuildContext {
+  String translate(String key) =>
+      AppLocalizations.of(this)!.translate(key).toString();
 }
 
 extension Validate on String {
