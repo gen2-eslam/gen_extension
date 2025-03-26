@@ -83,10 +83,7 @@ extension KeyBord on BuildContext {
   double get keyboardHeightWithoutBottom =>
       MediaQuery.of(this).viewInsets.bottom;
 }
-extension Translate on BuildContext {
-  String translate(String key) =>
-      AppLocalizations.of(this)!.translate(key).toString();
-}
+
 
 extension Validate on String {
   bool get isValidEmail {
